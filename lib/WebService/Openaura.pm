@@ -20,7 +20,7 @@ has 'http' => (
     default  => sub {
         my $http = Furl::HTTP->new(
             inet_aton => \&Net::DNS::Lite::inet_aton,
-            agent => 'WebService::SetlistFM/' . $VERSION,
+            agent => 'WebService::Openaura/' . $VERSION,
             headers => [ 'Accept-Encoding' => 'gzip',],
         );
         return $http;
