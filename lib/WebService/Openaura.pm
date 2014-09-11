@@ -13,6 +13,12 @@ our $VERSION = "0.01";
 
 $Net::DNS::Lite::CACHE = Cache::LRU->new( size => 512 );
 
+has 'api_key' => (
+    is => 'rw',
+    isa => sub { $_[0] },
+    required => 1,
+    default => sub { $ENV{OPENAURA_API_KEY} },
+);
 
 has 'http' => (
     is => 'rw',

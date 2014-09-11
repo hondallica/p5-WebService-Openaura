@@ -10,5 +10,9 @@ my $openaura = new WebService::Openaura;
 isa_ok $openaura, 'WebService::Openaura';
 isa_ok $openaura->{http}, 'Furl::HTTP';
 
+$openaura->api_key('YOUR_API_KEY');
+is $openaura->api_key, 'YOUR_API_KEY';
+
+
 done_testing;
 
