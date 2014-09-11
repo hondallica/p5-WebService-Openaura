@@ -1,9 +1,31 @@
 package WebService::Openaura;
-use 5.008001;
-use strict;
-use warnings;
-
+use JSON::XS;
+use Cache::LRU;
+use Net::DNS::Lite;
+use Furl;
+use URI;
+use URI::QueryParam;
+use Carp;
+use Moo;
+use namespace::clean;
 our $VERSION = "0.01";
+
+
+$Net::DNS::Lite::CACHE = Cache::LRU->new( size => 512 );
+
+
+has 'http' => (
+    is => 'rw',
+    required => 1,
+    default  => sub {
+        my $http = Furl::HTTP->new(
+            inet_aton => \&Net::DNS::Lite::inet_aton,
+            agent => 'WebService::SetlistFM/' . $VERSION,
+            headers => [ 'Accept-Encoding' => 'gzip',],
+        );
+        return $http;
+    },
+);
 
 
 
