@@ -17,10 +17,11 @@ WebService::Openaura - A simple and fast interface to the Openaura API
 
 # DESCRIPTION
 
-The module provides a simple interface to the Openaura API. To use this module, you must first sign up at http://developer.openaura.com/docs/ to receive an API key.
+The module provides a simple interface to the Openaura API. To use this module, you must first sign up at [http://developer.openaura.com/docs/](http://developer.openaura.com/docs/) to receive an API key.
 
 # METHODS
-These methods usage: http://developer.openaura.com/docs/
+
+These methods usage: [http://developer.openaura.com/docs/](http://developer.openaura.com/docs/)
 
 ### classic\_artists
 
@@ -61,6 +62,10 @@ These methods usage: http://developer.openaura.com/docs/
 ### source\_sources
 
 ### source\_version
+
+# SEE ALSO
+
+[http://developer.openaura.com/docs/](http://developer.openaura.com/docs/)
 
 # LICENSE
 
